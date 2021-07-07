@@ -1,8 +1,5 @@
-from scipy.sparse.construct import random
-from sklearn import metrics
 import streamlit as st
 import pandas as pd
-import numpy as np
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
@@ -13,9 +10,13 @@ from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precisio
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
+    
+    st.set_page_config(page_title="Mushroom Classifier" ,page_icon="🍄" ,layout="wide")
+
     st.title("MUSHROOM CLASSIFICATION")
+    st.write("-Aditya yadav")
     st.sidebar.title("Model & parameters")
-    st.markdown("How would you like your MUSHROOM to be? Edible or Poisonous 🍄")
+    st.subheader("How would you like your MUSHROOM to be? Edible or Poisonous 🍄")
     st.sidebar.markdown("If you are a good mushroom ,you dont have to fear 👮‍♂️")
 
     
@@ -131,7 +132,18 @@ def main():
         st.subheader("Mushroom Data Set {Classification}")
         st.markdown("The data is taken from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/mushroom)" )
         st.write(df)
-
+    st.write("")
+    st.write("")
+    if st.button("ABOUT ?") :    
+        st.markdown("\n")
+        st.write("This is a web app whose basic function is to take the model & hyperparameters from the user and print the results calculated through the input on the data .Check the left bar" )
+    else :
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+    st.image("mushroom01.jpg")
+    
     
 
     

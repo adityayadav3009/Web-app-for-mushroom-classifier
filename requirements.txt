@@ -1,6 +1,4 @@
-streamlit
-scipy
-sklearn
-pandas
-numpy
-sklearn
+streamlit==0.84.0
+sklearn==0.24.2
+pandas==1.1.3
+
